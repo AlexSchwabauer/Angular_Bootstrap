@@ -20,18 +20,18 @@ module.exports = function (grunt) {
       },
       rules: [  
               // 302 Redirect
-             // {from: '(.+)', to: '\#$1'}
+                {from: '^\/(.+)', to: '\#$1', redirect:'permanent'}
               ],
               server: {
-            //     options: {
-            //       middleware: function (connect, options) {
-            //         return [
-            //     rewriteRulesSnippet, // RewriteRules support
-            //     connect.static(require('path').resolve(options.base)) // mount filesystem
-            //     // ... any other middleware
-            //     ];
-            //   }
-            // }
+                options: {
+                  middleware: function (connect, options) {
+                    return [
+                    rewriteRulesSnippet, // RewriteRules support
+                    connect.static(require('path').resolve(options.base)) // mount filesystem
+                    // ... any other middleware
+                ];
+              }
+            }
           } 
         } 
       });
