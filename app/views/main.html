@@ -1,0 +1,21 @@
+<header role="main">
+	<div class="pure-g-r">	
+		<nav class="pure-menu pure-menu-open pure-menu-horizontal pure-u-1">
+			<a href="/" class="pure-menu-heading">Flashcards</a>
+			<ul class="pull-right">
+				<li ng-repeat="tab in self.tabs"><a href="/{{tab}}">{{tab}}</a></li>
+
+				<li class="fade" ng-if="self.auth.user"><button ng-click="self.auth.$logout()">Logout</button></li>
+			</ul>		
+		</nav>	
+	</div>	
+</header>
+<div class="pure-g-r" ng-if="self.auth.user">	
+	<div role="main" class="pure-u-1">		
+		<h1>{{self.auth.user.displayName}}</h1>
+	</div>	
+</div>
+
+
+
+

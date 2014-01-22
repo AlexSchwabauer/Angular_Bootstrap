@@ -1,0 +1,38 @@
+@import "global";
+
+$prim: #0078e7;
+body {
+	
+
+}
+
+#login_modal {
+	height: 80vh;
+}
+
+header[role=main] {
+	background: $prim;
+
+	nav.pure-menu { 		
+		a {
+			color:white;
+			font-weight: bold;
+		}nav.pure-menu { 
+		background: transparent;
+		a {
+			color:white;
+			font-weight: bold;
+		}
+		
+		ul {height: auto;}
+	}
+	}
+}
+
+#sidebar {
+	position: absolute;
+	top:0;
+	left: 0;
+	border: none;
+	background: teal;
+}

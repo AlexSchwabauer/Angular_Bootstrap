@@ -1,0 +1,7 @@
+{
+  "name": "flashcards",
+  "version": "0.1",
+  "dependencies": {
+    "pure": "~0.3.0"
+  }
+}
