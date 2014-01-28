@@ -6,12 +6,21 @@
 //app.controller('SampleCtrl', SampleCtrl);
 
 
-class SampleCtrl extends Master {   
+class profileCtrl extends Master { 
+    public tabs = ["home", "contact"];
        
-    constructor(s) {
-        super(s);
 
 
-    }
-    
+    constructor(s, sl, fb, l) {
+        super(s, sl, fb, l);
+
+        
+       
+
+    }    
+
+
+
 }
+
+

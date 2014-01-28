@@ -3,13 +3,15 @@ declare class Firebase {
 }
 
 
-interface IReference {
+interface IReference { 
     $child(key: string): IReference;
     $add(value: any);
+    $auth(token: string): ng.IPromise<any>;
     $remove(key: any);
     $save(key: any);
     $set(key: any);
     $getIndex(): any[];
+    then();
 }
 
 interface IFirebaseService {
@@ -19,10 +21,11 @@ interface IFirebaseService {
 
 interface IFirebaseSimpleLoginService {
     (fb: Firebase): IAuthReference;
+   
 }
 
 interface IAuthReference {
     $getCurrentUser(): ng.IPromise<any>
     $login(provider: string, options?: Object[]): ng.IPromise<any>;
-
+  
 }

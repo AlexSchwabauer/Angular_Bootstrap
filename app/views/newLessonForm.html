@@ -1,0 +1,25 @@
+<div ng-include="'views/includes/nav.html'"></div>
+
+<div class="pure-g-r">
+	<div class="pure-u-1-3">
+		<form class="pure-form pure-form-aligned" ng-submit="self.saveLesson()">
+			<legend>New lesson</legend>
+			<fieldset>
+				<div class="pure-control-group">
+					<input ng-model="self.newLessonData.name" class="pure-input-1" type="text" placeholder="Lesson Name">
+				</div>
+
+				<div class="pure-control-group">
+					<textarea ng-model="self.newLessonData.desc" class="pure-u-1"></textarea>
+				</div>
+
+				<div class="pure-control-group">
+					<button type="submit" class="pure-button pure-button-primary">Submit</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+
+
