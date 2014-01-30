@@ -2,22 +2,15 @@
 @import "partials/base";
 
 
-
-
-
-
-
 header[role=main] {
 	@include row(0);	
 	
 	background:$accent;
-	padding: 1em 0;
+	color: contrasted($accent);
+	//padding: 1em 0;
 	
 	nav {
-		ul {
-			float: right;
-			li > * {@include inline-list-item()}
-		}
+		@include inline-nav();
 	}
 }
 

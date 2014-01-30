@@ -1,12 +1,9 @@
-<header role="main">
-	<div>	
-		<nav>
-			<a href="/">Flashcards</a>
+<header role="main">	
+		<nav>		
 			<ul>
 				<li ng-repeat="tab in self.tabs"><a href="/{{tab}}">{{tab}}</a></li>
 				
 				<li ng-if="self.auth.user"><button ng-click="self.auth.$logout()">Logout</button><strong>Hi, {{self.auth.user.thirdPartyUserData.first_name}}</strong></li>
 			</ul>		
-		</nav>	
-	</div>	
+		</nav>		
 </header>

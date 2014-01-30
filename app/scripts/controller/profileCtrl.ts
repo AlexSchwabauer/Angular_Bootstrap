@@ -7,7 +7,7 @@
 
 
 class profileCtrl extends Master { 
-    public tabs = ["home", "contact"];
+    public tabs = [""];
        
 
 

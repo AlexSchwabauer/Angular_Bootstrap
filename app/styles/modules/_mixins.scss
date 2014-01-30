@@ -5,19 +5,21 @@
 }
 
 
-@mixin inline-list-item($padding: 4px, $direction: left) {
+@mixin inline-nav($padding: 0.5em 1em, $direction: right) {	
 	
-	
-	white-space: nowrap;
-	float: $direction;  
-	@if $padding {
-		padding: {
-			left: $padding;
-			right: $padding; };
-			&:first-child, &.first {
-				padding-#{$direction}: 0; }
-				&:last-child {
-					padding-#{opposite-position($direction)}: 0; }
-					&.last {
-						padding-#{opposite-position($direction)}: 0; } } }
-						
+	@include clearfix();
+	ul {
+		white-space: nowrap;
+		float: $direction;  
+		li {
+			display: inline-block;
+			> * {					
+				padding: $padding;
+			}
+			a {
+				display: block;
+			}
+		} 
+	}
+}
+

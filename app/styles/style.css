@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:400,300,700);
 a, a:link, a:hover, a:active, a:visited {
   text-decoration: none;
-  color: black; }
+  color: inherit; }
 
-button, button:active, button:focus, button:visited {
-  outline: none;
-  border: none; }
+button {
+  cursor: pointer; }
+  button, button:active, button:focus, button:visited {
+    outline: none;
+    border: none; }
 
 ul {
   margin: 0;
@@ -19,8 +21,7 @@ ul {
   font: bold 1em "Open Sans", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  transition: .3s;
-  cursor: pointer; }
+  transition: .3s; }
 
 .btn-accent {
   background-color: #0078e7;
@@ -74,22 +75,25 @@ header[role=main] {
   margin: 0 -Infinity%;
   *zoom: 1;
   background: #0078e7;
-  padding: 1em 0; }
+  color: #f0f0f0; }
   header[role=main]:before, header[role=main]:after {
     content: "";
     display: table; }
   header[role=main]:after {
     clear: both; }
-  header[role=main] nav ul {
-    float: right; }
-    header[role=main] nav ul li > * {
+  header[role=main] nav {
+    *zoom: 1; }
+    header[role=main] nav:before, header[role=main] nav:after {
+      content: "";
+      display: table; }
+    header[role=main] nav:after {
+      clear: both; }
+    header[role=main] nav ul {
       white-space: nowrap;
-      float: left;
-      padding-left: 4px;
-      padding-right: 4px; }
-      header[role=main] nav ul li > *:first-child, header[role=main] nav ul li > *.first {
-        padding-left: 0; }
-      header[role=main] nav ul li > *:last-child {
-        padding-opposite-position(left): 0; }
-      header[role=main] nav ul li > *.last {
-        padding-opposite-position(left): 0; }
+      float: right; }
+      header[role=main] nav ul li {
+        display: inline-block; }
+        header[role=main] nav ul li > * {
+          padding: 0.5em 1em; }
+        header[role=main] nav ul li a {
+          display: block; }

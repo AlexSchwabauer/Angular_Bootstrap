@@ -12,7 +12,7 @@ var profileCtrl = (function (_super) {
     __extends(profileCtrl, _super);
     function profileCtrl(s, sl, fb, l) {
         _super.call(this, s, sl, fb, l);
-        this.tabs = ["home", "contact"];
+        this.tabs = [""];
     }
     return profileCtrl;
 })(Master);

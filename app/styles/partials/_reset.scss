@@ -1,12 +1,12 @@
 
 a,a:link,a:hover,a:active,a:visited {
 	text-decoration: none;
-	color:black;
+	color:inherit;
 }
 	
 
 button {
-	
+	cursor: pointer;
 	&,&:active,&:focus,&:visited {
 		
 		outline: none;
