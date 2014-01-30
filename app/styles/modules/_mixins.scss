@@ -1,0 +1,23 @@
+@mixin rem($number) {
+	font-size: #{$number*10}px; // IE fallback
+	font-size: #{$number}rem;
+	
+}
+
+
+@mixin inline-list-item($padding: 4px, $direction: left) {
+	
+	
+	white-space: nowrap;
+	float: $direction;  
+	@if $padding {
+		padding: {
+			left: $padding;
+			right: $padding; };
+			&:first-child, &.first {
+				padding-#{$direction}: 0; }
+				&:last-child {
+					padding-#{opposite-position($direction)}: 0; }
+					&.last {
+						padding-#{opposite-position($direction)}: 0; } } }
+						

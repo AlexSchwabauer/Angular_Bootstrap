@@ -1,0 +1,34 @@
+%btn {
+        display: inline-block;
+        margin: 1rem; 
+        padding: .938em 1.875em;      
+        font: bold 1em $mainFont;
+        text: {
+                transform: uppercase;
+                decoration: none;                
+        }
+        transition: .3s;
+        cursor:pointer;
+}
+
+%btn-rounded {
+    @extend %btn;
+    border-radius: .625em;
+    box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $trans-wht, inset 0 -.188em rgba(black,.15);
+}
+
+// Mixins
+
+@mixin btn-theme($btn-color) {       
+        background-color: $btn-color;
+        color:contrasted($btn-color);
+        &:hover {
+                background-color: darken($btn-color, 6%);                
+        }        
+        @extend %btn;
+}
+
+
+.btn-accent {
+    @include btn-theme($accent);
+}

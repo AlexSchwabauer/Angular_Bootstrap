@@ -1,11 +1,11 @@
 <header role="main">
-	<div class="pure-g-r">	
-		<nav class="pure-menu pure-menu-open pure-menu-horizontal pure-u-1">
-			<a href="/" class="pure-menu-heading">Flashcards</a>
-			<ul class="pull-right">
+	<div>	
+		<nav>
+			<a href="/">Flashcards</a>
+			<ul>
 				<li ng-repeat="tab in self.tabs"><a href="/{{tab}}">{{tab}}</a></li>
 				
-				<li ng-if="self.auth.user"><button class="pure-button pure-button-primary" ng-click="self.auth.$logout()">Logout</button><strong>Hi, {{self.auth.user.thirdPartyUserData.first_name}}</strong></li>
+				<li ng-if="self.auth.user"><button ng-click="self.auth.$logout()">Logout</button><strong>Hi, {{self.auth.user.thirdPartyUserData.first_name}}</strong></li>
 			</ul>		
 		</nav>	
 	</div>	

@@ -1,51 +1,32 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:400,300,700);
-/* apply a natural box layout model to all elements */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+a, a:link, a:hover, a:active, a:visited {
+  text-decoration: none;
+  color: black; }
 
-body,
-.pure-g [class*="pure-u"],
-.pure-g-r [class*="pure-u"], h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif; }
+button, button:active, button:focus, button:visited {
+  outline: none;
+  border: none; }
 
-button {
-  background: transparent; }
-  button:active, button:focus, button:visited {
-    outline: none;
-    border: none; }
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
-a {
-  text-decoration: none !important; }
+.btn-accent {
+  display: inline-block;
+  margin: 1rem;
+  padding: .938em 1.875em;
+  font: bold 1em "Open Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: .3s;
+  cursor: pointer; }
 
-.pure-g-r {
-  padding: 0 10vw; }
-
-.pure-button-xlarge {
-  font-size: 2vw; }
-
-.pull-right {
-  float: right; }
-
-nav.pure-menu.pure-menu-open {
-  background: transparent; }
-  nav.pure-menu.pure-menu-open ul {
-    height: auto; }
-
-.center {
-  text-align: center; }
-
-.flex {
-  display: flex; }
-  .flex.flex-full {
-    margin-top: 10vh;
-    width: 100%;
-    position: absolute;
-    left: 0; }
-  .flex.flex-center {
-    align-items: center;
-    justify-content: center; }
+.btn-accent {
+  background-color: #0078e7;
+  color: #f0f0f0; }
+  .btn-accent:hover {
+    background-color: #0068c8; }
 
 .fade.ng-enter, .fade.ng-leave {
   -webkit-transition: 0.2s linear all;
@@ -63,60 +44,52 @@ nav.pure-menu.pure-menu-open {
 .fade.ng-enter.ng-enter-active {
   opacity: 1; }
 
-.view-animate-container {
-  position: absolute;
-  height: 100%;
+body {
   width: 100%;
-  overflow: hidden; }
+  *zoom: 1; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
 
-.view-animate.ng-enter, .view-animate.ng-leave {
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
+html {
+  font-size: 62.5%; }
 
-.view-animate.ng-enter {
-  left: 100%; }
-
-.view-animate.ng-enter.ng-enter-active {
-  left: 0; }
-
-.view-animate.ng-leave.ng-leave-active {
-  left: -100%; }
-
-#login_modal {
-  height: 80vh; }
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: #333333;
+  margin: 0; }
+  @media only screen and (min-width: 1224px) {
+    body {
+      font-size: 20px;
+      font-size: 2rem; } }
 
 header[role=main] {
-  background: #0078e7; }
-  header[role=main] nav.pure-menu a {
-    color: white;
-    font-weight: bold; }
-  header[role=main] nav.pure-menu nav.pure-menu {
-    background: transparent; }
-    header[role=main] nav.pure-menu nav.pure-menu a {
-      color: white;
-      font-weight: bold; }
-    header[role=main] nav.pure-menu nav.pure-menu ul {
-      height: auto; }
-
-.huge_dashed {
-  padding: 10vh 10vw;
-  border-radius: 10px;
-  border: 5px dashed transparent;
-  transition: all ease 0.3s;
-  text-align: center; }
-  .huge_dashed h2 {
-    font-size: 4vw;
-    font-weight: 100;
-    color: #333; }
-  .huge_dashed:hover {
-    border-color: #0078e7; }
-  .huge_dashed i.fa {
-    font-size: 10vw;
-    color: #0078e7; }
+  display: block;
+  width: Infinity%;
+  margin: 0 -Infinity%;
+  *zoom: 1;
+  background: #0078e7;
+  padding: 1em 0; }
+  header[role=main]:before, header[role=main]:after {
+    content: "";
+    display: table; }
+  header[role=main]:after {
+    clear: both; }
+  header[role=main] nav ul {
+    float: right; }
+    header[role=main] nav ul li > * {
+      white-space: nowrap;
+      float: left;
+      padding-left: 4px;
+      padding-right: 4px; }
+      header[role=main] nav ul li > *:first-child, header[role=main] nav ul li > *.first {
+        padding-left: 0; }
+      header[role=main] nav ul li > *:last-child {
+        padding-opposite-position(left): 0; }
+      header[role=main] nav ul li > *.last {
+        padding-opposite-position(left): 0; }

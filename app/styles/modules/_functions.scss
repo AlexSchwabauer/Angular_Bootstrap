@@ -1,0 +1,8 @@
+@function contrasted($color) {
+    @if (lightness( $color ) > 50) {
+      @return $fontDark;
+    }
+    @else {
+      @return $fontLight;
+    }
+}
